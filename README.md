@@ -7,7 +7,7 @@ Designed java spring boot form submission application with frontend.
 - User service:
   In this file ``@service`` to access to return the user information.
 - Controller file:
-  In this file ``@controller`` to control the Get :``@GetMapping("/")`` and Post :``@PostMapping("/submit")`` method of html contents,if use ``@REST controller for json response.
+  In this file ``@controller`` to control the Get :``@GetMapping("/")`` and Post :``@PostMapping("/submit")`` method of html contents,if use ``@REST controller`` for json response.
 - Main Spring Boot Application file:
   In this file run the spring boot application ``@SpringBootApplication``
 - Form:
