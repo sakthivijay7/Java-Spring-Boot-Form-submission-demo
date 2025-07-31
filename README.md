@@ -11,7 +11,7 @@ Designed java spring boot form submission application with frontend.
 - Main Spring Boot Application file:
   In this file run the spring boot application ``@SpringBootApplication``
 - Form:
-  In web page enter user name,password,emailid,phone if click submit the next page entered user details display.
+  In web page enter user name,password,emailid,phone if click submit the next page entered user details will be display.
   Technique:
   Java -springboot,
   HTML&CSS,JS ,
