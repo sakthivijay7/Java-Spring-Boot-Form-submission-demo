@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Springboot</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div th:if="${!submitted}" class="incontainer">
+
+    <form method="post" th:object="${user}" th:action="@{/submit}">
+    <h1>Springboot Developer Form</h1>
+
+    <label for="name" >Name :</label>
+    <input type="text" id="name" th:field="*{name}" required>
+
+    <label for="emailid">Email Id :</label>
+    <input type="email" id="emailid" th:field="*{emailid}" required>
+
+    <label for="pass" >Password :</label>
+    <input type="password" id="pass" th:field="*{password}" required>
+
+    <label for="phone" >Phone:</label>
+    <input type="text" id="phone" th:field="*{phone}" required>
+    <button type="reset">Reset</button>
+    <button type="submit" onclick="showmessage()"> Submit </button>
+    <script>
+            function showmessage(){
+                alert("Submitted");
+            }
+    </script>
+    </form>
+    </div>
+
+    <div th:if="${submitted}" class="outcontainer">
+        <p><center>User Information</center></p>
+    <p>Name     : <span th:text="${user.name}"></span></P>
+    <p>Email Id : <span th:text="${user.emailid}"></span></P>
+    <p>Password : <span th:text="${user.password}"><span></P>
+    <p>Phone No : <span th:text="${user.phone}"></span></P><br>
+    <a href="/"><button >Back</button></a>
+    </div>
+    <!-- <script src="/index.js"></script> -->
+</body>
+</html>
